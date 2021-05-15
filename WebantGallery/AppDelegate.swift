@@ -10,13 +10,27 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
-    }
-
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+            
+            window = UIWindow()
+            window?.backgroundColor = .white
+            let storyboard = UIStoryboard(name: "Main", bundle: .main)
+            
+            let newGalleryViewController = storyboard.instantiateViewController(identifier: "NewViewController") as! NewGalleryViewController
+            
+            let popularGalleryViewController = PopularGalleryViewController()
+                        
+            let controller = storyboard.instantiateViewController(identifier: "InitialViewController") as! UITabBarController
+            
+            controller.viewControllers = [newGalleryViewController, popularGalleryViewController]
+            
+            window?.rootViewController = controller
+            window?.makeKeyAndVisible()
+            
+            return true
+        }
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

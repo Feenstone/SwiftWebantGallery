@@ -3,27 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0024C58D264D0AF6009843F0 /* PopularGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0024C58C264D0AF6009843F0 /* PopularGalleryViewController.swift */; };
+		005265DB264BE69C00C9762C /* PhotoContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005265DA264BE69C00C9762C /* PhotoContract.swift */; };
+		00773701264AB96B0042DA38 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00773700264AB96B0042DA38 /* Response.swift */; };
 		0079C40B264A7AC10008EE2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079C40A264A7AC10008EE2D /* AppDelegate.swift */; };
 		0079C40D264A7AC10008EE2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079C40C264A7AC10008EE2D /* SceneDelegate.swift */; };
-		0079C40F264A7AC10008EE2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079C40E264A7AC10008EE2D /* ViewController.swift */; };
+		0079C40F264A7AC10008EE2D /* NewGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079C40E264A7AC10008EE2D /* NewGalleryViewController.swift */; };
 		0079C412264A7AC10008EE2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0079C410264A7AC10008EE2D /* Main.storyboard */; };
 		0079C414264A7AC20008EE2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0079C413264A7AC20008EE2D /* Assets.xcassets */; };
 		0079C417264A7AC20008EE2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0079C415264A7AC20008EE2D /* LaunchScreen.storyboard */; };
+		0079C423264A7D1A0008EE2D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079C422264A7D1A0008EE2D /* NetworkManager.swift */; };
+		00835BEC264A7FEE006E00A1 /* GalleryRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00835BEB264A7FEE006E00A1 /* GalleryRequestBuilder.swift */; };
+		00835BF2264A86D0006E00A1 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00835BF1264A86D0006E00A1 /* APIError.swift */; };
+		00835BF5264A883E006E00A1 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00835BF4264A883E006E00A1 /* Photo.swift */; };
+		00835BF8264A8ADB006E00A1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00835BF7264A8ADB006E00A1 /* APIService.swift */; };
+		00835C05264A96AA006E00A1 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00835C04264A96AA006E00A1 /* GalleryPresenter.swift */; };
+		00835C0F264AA72D006E00A1 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00835C0D264AA72D006E00A1 /* PhotoCollectionViewCell.swift */; };
+		00835C10264AA72D006E00A1 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00835C0E264AA72D006E00A1 /* PhotoCollectionViewCell.xib */; };
+		00F2ED7F264EA1C000CA669A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2ED7E264EA1C000CA669A /* Extensions.swift */; };
+		00F2ED83264FD29300CA669A /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2ED82264FD29300CA669A /* PhotoDetailViewController.swift */; };
+		D9D6D31486FF6306EE1C5B6C /* Pods_WebantGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F6A2E7A7C9FEEE35AC9A7C /* Pods_WebantGallery.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0024C58C264D0AF6009843F0 /* PopularGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularGalleryViewController.swift; sourceTree = "<group>"; };
+		005265DA264BE69C00C9762C /* PhotoContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoContract.swift; sourceTree = "<group>"; };
+		00773700264AB96B0042DA38 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		0079C407264A7AC10008EE2D /* WebantGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebantGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0079C40A264A7AC10008EE2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0079C40C264A7AC10008EE2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0079C40E264A7AC10008EE2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0079C40E264A7AC10008EE2D /* NewGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGalleryViewController.swift; sourceTree = "<group>"; };
 		0079C411264A7AC10008EE2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0079C413264A7AC20008EE2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0079C416264A7AC20008EE2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0079C418264A7AC20008EE2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0079C422264A7D1A0008EE2D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		00835BEB264A7FEE006E00A1 /* GalleryRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRequestBuilder.swift; sourceTree = "<group>"; };
+		00835BF1264A86D0006E00A1 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		00835BF4264A883E006E00A1 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		00835BF7264A8ADB006E00A1 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		00835C04264A96AA006E00A1 /* GalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
+		00835C0D264AA72D006E00A1 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		00835C0E264AA72D006E00A1 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		00F2ED7E264EA1C000CA669A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		00F2ED82264FD29300CA669A /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		1AF27E458188E489842F401B /* Pods-WebantGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebantGallery.debug.xcconfig"; path = "Target Support Files/Pods-WebantGallery/Pods-WebantGallery.debug.xcconfig"; sourceTree = "<group>"; };
+		74281A2CA27961F8BFEEC4E2 /* Pods-WebantGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebantGallery.release.xcconfig"; path = "Target Support Files/Pods-WebantGallery/Pods-WebantGallery.release.xcconfig"; sourceTree = "<group>"; };
+		95F6A2E7A7C9FEEE35AC9A7C /* Pods_WebantGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebantGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9D6D31486FF6306EE1C5B6C /* Pods_WebantGallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +73,8 @@
 			children = (
 				0079C409264A7AC10008EE2D /* WebantGallery */,
 				0079C408264A7AC10008EE2D /* Products */,
+				A03BAA8EF8AC381591F15D35 /* Pods */,
+				6064D1988E5540F11738E50D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +89,93 @@
 		0079C409264A7AC10008EE2D /* WebantGallery */ = {
 			isa = PBXGroup;
 			children = (
+				00835C07264AA6E6006E00A1 /* Views */,
+				0079C421264A7CF00008EE2D /* Features */,
+				0079C420264A7CE80008EE2D /* Utils */,
 				0079C40A264A7AC10008EE2D /* AppDelegate.swift */,
 				0079C40C264A7AC10008EE2D /* SceneDelegate.swift */,
-				0079C40E264A7AC10008EE2D /* ViewController.swift */,
 				0079C410264A7AC10008EE2D /* Main.storyboard */,
 				0079C413264A7AC20008EE2D /* Assets.xcassets */,
 				0079C415264A7AC20008EE2D /* LaunchScreen.storyboard */,
 				0079C418264A7AC20008EE2D /* Info.plist */,
 			);
 			path = WebantGallery;
+			sourceTree = "<group>";
+		};
+		0079C420264A7CE80008EE2D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0079C422264A7D1A0008EE2D /* NetworkManager.swift */,
+				00835BEB264A7FEE006E00A1 /* GalleryRequestBuilder.swift */,
+				00835BF1264A86D0006E00A1 /* APIError.swift */,
+				00835BF7264A8ADB006E00A1 /* APIService.swift */,
+				00F2ED7E264EA1C000CA669A /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0079C421264A7CF00008EE2D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				00835BEA264A7E38006E00A1 /* Gallery */,
+				00835C04264A96AA006E00A1 /* GalleryPresenter.swift */,
+				005265DA264BE69C00C9762C /* PhotoContract.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		00835BEA264A7E38006E00A1 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				00835BF0264A8565006E00A1 /* Views */,
+				00835BEF264A8560006E00A1 /* Models */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		00835BEF264A8560006E00A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00835BF4264A883E006E00A1 /* Photo.swift */,
+				00773700264AB96B0042DA38 /* Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		00835BF0264A8565006E00A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0079C40E264A7AC10008EE2D /* NewGalleryViewController.swift */,
+				0024C58C264D0AF6009843F0 /* PopularGalleryViewController.swift */,
+				00F2ED82264FD29300CA669A /* PhotoDetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00835C07264AA6E6006E00A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00835C0D264AA72D006E00A1 /* PhotoCollectionViewCell.swift */,
+				00835C0E264AA72D006E00A1 /* PhotoCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6064D1988E5540F11738E50D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95F6A2E7A7C9FEEE35AC9A7C /* Pods_WebantGallery.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A03BAA8EF8AC381591F15D35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1AF27E458188E489842F401B /* Pods-WebantGallery.debug.xcconfig */,
+				74281A2CA27961F8BFEEC4E2 /* Pods-WebantGallery.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0079C41B264A7AC20008EE2D /* Build configuration list for PBXNativeTarget "WebantGallery" */;
 			buildPhases = (
+				3153422ECB9EBC0EE98E6DBD /* [CP] Check Pods Manifest.lock */,
 				0079C403264A7AC10008EE2D /* Sources */,
 				0079C404264A7AC10008EE2D /* Frameworks */,
 				0079C405264A7AC10008EE2D /* Resources */,
+				2A84997D00BFAAAA9238B337 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0079C417264A7AC20008EE2D /* LaunchScreen.storyboard in Resources */,
+				00835C10264AA72D006E00A1 /* PhotoCollectionViewCell.xib in Resources */,
 				0079C414264A7AC20008EE2D /* Assets.xcassets in Resources */,
 				0079C412264A7AC10008EE2D /* Main.storyboard in Resources */,
 			);
@@ -132,14 +246,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A84997D00BFAAAA9238B337 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebantGallery/Pods-WebantGallery-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebantGallery/Pods-WebantGallery-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebantGallery/Pods-WebantGallery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3153422ECB9EBC0EE98E6DBD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebantGallery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0079C403264A7AC10008EE2D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0079C40F264A7AC10008EE2D /* ViewController.swift in Sources */,
+				00835BF5264A883E006E00A1 /* Photo.swift in Sources */,
+				00835C0F264AA72D006E00A1 /* PhotoCollectionViewCell.swift in Sources */,
+				005265DB264BE69C00C9762C /* PhotoContract.swift in Sources */,
+				00F2ED83264FD29300CA669A /* PhotoDetailViewController.swift in Sources */,
+				0079C423264A7D1A0008EE2D /* NetworkManager.swift in Sources */,
+				00835BEC264A7FEE006E00A1 /* GalleryRequestBuilder.swift in Sources */,
+				0079C40F264A7AC10008EE2D /* NewGalleryViewController.swift in Sources */,
 				0079C40B264A7AC10008EE2D /* AppDelegate.swift in Sources */,
 				0079C40D264A7AC10008EE2D /* SceneDelegate.swift in Sources */,
+				00773701264AB96B0042DA38 /* Response.swift in Sources */,
+				0024C58D264D0AF6009843F0 /* PopularGalleryViewController.swift in Sources */,
+				00835BF8264A8ADB006E00A1 /* APIService.swift in Sources */,
+				00835C05264A96AA006E00A1 /* GalleryPresenter.swift in Sources */,
+				00835BF2264A86D0006E00A1 /* APIError.swift in Sources */,
+				00F2ED7F264EA1C000CA669A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +451,7 @@
 		};
 		0079C41C264A7AC20008EE2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AF27E458188E489842F401B /* Pods-WebantGallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +471,7 @@
 		};
 		0079C41D264A7AC20008EE2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74281A2CA27961F8BFEEC4E2 /* Pods-WebantGallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

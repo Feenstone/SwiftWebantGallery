@@ -1,0 +1,6 @@
+framework module Pods_WebantGallery {
+  umbrella header "Pods-WebantGallery-umbrella.h"
+
+  export *
+  module * { export * }
+}
