@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000C7D2D2653E8F700EF6240 /* GalleryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C7D2C2653E8F700EF6240 /* GalleryConfigurator.swift */; };
 		0024C58D264D0AF6009843F0 /* PopularGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0024C58C264D0AF6009843F0 /* PopularGalleryViewController.swift */; };
 		005265DB264BE69C00C9762C /* PhotoContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005265DA264BE69C00C9762C /* PhotoContract.swift */; };
 		00773701264AB96B0042DA38 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00773700264AB96B0042DA38 /* Response.swift */; };
@@ -24,12 +25,16 @@
 		00835C05264A96AA006E00A1 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00835C04264A96AA006E00A1 /* GalleryPresenter.swift */; };
 		00835C0F264AA72D006E00A1 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00835C0D264AA72D006E00A1 /* PhotoCollectionViewCell.swift */; };
 		00835C10264AA72D006E00A1 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00835C0E264AA72D006E00A1 /* PhotoCollectionViewCell.xib */; };
+		00BA61BA26529D6D00AD3471 /* No internet.png in Resources */ = {isa = PBXBuildFile; fileRef = 00BA61B926529D6D00AD3471 /* No internet.png */; };
+		00E842B72656723D00E5FB69 /* DetailScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E842B62656723D00E5FB69 /* DetailScreenStoryboard.storyboard */; };
+		00E842B92656725100E5FB69 /* GalleryCollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E842B82656725100E5FB69 /* GalleryCollectionView.storyboard */; };
 		00F2ED7F264EA1C000CA669A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2ED7E264EA1C000CA669A /* Extensions.swift */; };
 		00F2ED83264FD29300CA669A /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2ED82264FD29300CA669A /* PhotoDetailViewController.swift */; };
 		D9D6D31486FF6306EE1C5B6C /* Pods_WebantGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F6A2E7A7C9FEEE35AC9A7C /* Pods_WebantGallery.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000C7D2C2653E8F700EF6240 /* GalleryConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryConfigurator.swift; sourceTree = "<group>"; };
 		0024C58C264D0AF6009843F0 /* PopularGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularGalleryViewController.swift; sourceTree = "<group>"; };
 		005265DA264BE69C00C9762C /* PhotoContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoContract.swift; sourceTree = "<group>"; };
 		00773700264AB96B0042DA38 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		00835C04264A96AA006E00A1 /* GalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
 		00835C0D264AA72D006E00A1 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		00835C0E264AA72D006E00A1 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		00BA61B926529D6D00AD3471 /* No internet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "No internet.png"; path = "../../../Downloads/android test 2/assets/No internet.png"; sourceTree = "<group>"; };
+		00E842B62656723D00E5FB69 /* DetailScreenStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DetailScreenStoryboard.storyboard; path = ../../../.Trash/DetailScreenStoryboard.storyboard; sourceTree = "<group>"; };
+		00E842B82656725100E5FB69 /* GalleryCollectionView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = GalleryCollectionView.storyboard; path = ../../../.Trash/GalleryCollectionView.storyboard; sourceTree = "<group>"; };
 		00F2ED7E264EA1C000CA669A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		00F2ED82264FD29300CA669A /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		1AF27E458188E489842F401B /* Pods-WebantGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebantGallery.debug.xcconfig"; path = "Target Support Files/Pods-WebantGallery/Pods-WebantGallery.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,7 +103,10 @@
 				0079C40A264A7AC10008EE2D /* AppDelegate.swift */,
 				0079C40C264A7AC10008EE2D /* SceneDelegate.swift */,
 				0079C410264A7AC10008EE2D /* Main.storyboard */,
+				00E842B62656723D00E5FB69 /* DetailScreenStoryboard.storyboard */,
+				00E842B82656725100E5FB69 /* GalleryCollectionView.storyboard */,
 				0079C413264A7AC20008EE2D /* Assets.xcassets */,
+				00BA61B926529D6D00AD3471 /* No internet.png */,
 				0079C415264A7AC20008EE2D /* LaunchScreen.storyboard */,
 				0079C418264A7AC20008EE2D /* Info.plist */,
 			);
@@ -129,6 +140,7 @@
 			children = (
 				00835BF0264A8565006E00A1 /* Views */,
 				00835BEF264A8560006E00A1 /* Models */,
+				000C7D2C2653E8F700EF6240 /* GalleryConfigurator.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -239,8 +251,11 @@
 			files = (
 				0079C417264A7AC20008EE2D /* LaunchScreen.storyboard in Resources */,
 				00835C10264AA72D006E00A1 /* PhotoCollectionViewCell.xib in Resources */,
+				00E842B72656723D00E5FB69 /* DetailScreenStoryboard.storyboard in Resources */,
 				0079C414264A7AC20008EE2D /* Assets.xcassets in Resources */,
 				0079C412264A7AC10008EE2D /* Main.storyboard in Resources */,
+				00BA61BA26529D6D00AD3471 /* No internet.png in Resources */,
+				00E842B92656725100E5FB69 /* GalleryCollectionView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +315,7 @@
 				0079C423264A7D1A0008EE2D /* NetworkManager.swift in Sources */,
 				00835BEC264A7FEE006E00A1 /* GalleryRequestBuilder.swift in Sources */,
 				0079C40F264A7AC10008EE2D /* NewGalleryViewController.swift in Sources */,
+				000C7D2D2653E8F700EF6240 /* GalleryConfigurator.swift in Sources */,
 				0079C40B264A7AC10008EE2D /* AppDelegate.swift in Sources */,
 				0079C40D264A7AC10008EE2D /* SceneDelegate.swift in Sources */,
 				00773701264AB96B0042DA38 /* Response.swift in Sources */,

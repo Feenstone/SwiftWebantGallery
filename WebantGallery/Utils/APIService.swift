@@ -11,9 +11,11 @@ import RxSwift
 class APIService {
     private let builder = GalleryRequestBuilder()
     
-    private let decoder = JSONDecoder()
-    
     func fetchNewPhotos(page: Int) -> Observable<Response> {
         return NetworkManager<Response>().fetchPhotoArray(with: builder.fetchNewImages(page: page))
+    }
+    
+    func fetchPopularPhotos(page: Int) -> Observable<Response> {
+        return NetworkManager<Response>().fetchPhotoArray(with: builder.fetchPopularImages(page: page))
     }
 }

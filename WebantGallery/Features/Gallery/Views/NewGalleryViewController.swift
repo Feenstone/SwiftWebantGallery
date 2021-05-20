@@ -9,9 +9,11 @@ import UIKit
 import Alamofire
 import Kingfisher
 
-class NewGalleryViewController: UIViewController {
+class GalleryViewController: UIViewController {
     var presenter: ViewToPresenterPhotoProtocol?
     var builder: GalleryRequestBuilder?
+    var service: APIService?
+    
     
     @IBOutlet var collectionView: UICollectionView!
     let refreshControl = UIRefreshControl()
@@ -23,19 +25,26 @@ class NewGalleryViewController: UIViewController {
         presenter?.refresh()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setUpNavBar(with: "New")
+    
         self.collectionView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         self.setupPresenterIfNeed()
         presenter?.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
     func setupPresenterIfNeed() {
+        self.service = APIService()
         self.collectionView.backgroundColor = UIColor.white
         if self.presenter == nil {
-            let presenter = GalleryPresenter()
+            let presenter = GalleryPresenter(newOrPopularChooser: service!.fetchNewPhotos)
             presenter.view = self
             self.presenter = presenter
             self.builder = GalleryRequestBuilder()
@@ -43,7 +52,7 @@ class NewGalleryViewController: UIViewController {
     }
 }
 
-extension NewGalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.presenter?.photos.count ?? 0
@@ -56,7 +65,7 @@ extension NewGalleryViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.cellSetup(photo: (self.presenter?.photos[indexPath.item])!)
         
         if indexPath.row == (self.presenter?.photos.count)! - 1 {
-            self.presenter?.fetchNewPhotos()
+            self.presenter?.fetchPhotos()
         }
         
         return cell
@@ -68,9 +77,8 @@ extension NewGalleryViewController: UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: 180, height: 128)
     }
     
-    private func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        // handle tap events
-        print("siski")
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -84,9 +92,20 @@ extension NewGalleryViewController: UICollectionViewDelegate, UICollectionViewDa
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20.0
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? PhotoDetailViewController,
+           let index = collectionView.indexPathsForSelectedItems?.first {
+            destination.modalPresentationStyle = .custom
+            destination.photo = self.presenter?.photos[index.row]
+            
+        }
+        
+    }
 }
 
-extension NewGalleryViewController: PresenterToViewPhotoProtocol{
+extension GalleryViewController: PresenterToViewPhotoProtocol{
     func onFetchPhotoSuccess() {
         self.collectionView.reloadData()
         self.collectionView!.collectionViewLayout.invalidateLayout()
@@ -97,6 +116,11 @@ extension NewGalleryViewController: PresenterToViewPhotoProtocol{
     func onFetchPhotoFailure(error: String) {
         print("View receives the response from Presenter with error: \(error)")
         self.collectionView.refreshControl?.endRefreshing()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let controller = storyboard.instantiateViewController(identifier: "NoInternetConnectionVC")
+        controller.modalPresentationStyle = .custom
+        self.present(controller, animated: true)
     }
     
     

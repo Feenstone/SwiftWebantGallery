@@ -10,6 +10,7 @@ import RxSwift
 
 class GalleryPresenter: ViewToPresenterPhotoProtocol {
     var view: PresenterToViewPhotoProtocol?
+    var newOrPopularChooser: (_ page: Int) -> Observable<Response>
     
     private let service = APIService()
     private var page = 1
@@ -17,39 +18,30 @@ class GalleryPresenter: ViewToPresenterPhotoProtocol {
     
     var photos: [Photo] = [Photo]()
     
+    init(newOrPopularChooser: @escaping (_ page: Int) -> Observable<Response>) {
+        self.newOrPopularChooser = newOrPopularChooser
+    }
+    
     func viewDidLoad() {
-        fetchNewPhotos()
+        fetchPhotos()
     }
     
     func refresh() {
         page = 1
         photos.removeAll()
-        fetchNewPhotos()
+        fetchPhotos()
     }
     
-    func fetchNewPhotos() {
-        service.fetchNewPhotos(page: self.page)
-            .observe(on: MainScheduler.instance)
-            .subscribe { (response) in
-                self.photos.append(contentsOf: response.data)
-                self.view?.onFetchPhotoSuccess()
-            } onError: { (error) in
-                print(error.localizedDescription)
-            } onCompleted: {
-                self.page += 1
-            }.disposed(by: disposeBag)
-    }
-    
-    func fetchPopularPhotos() {
-        service.fetchNewPhotos(page: self.page)
+    func fetchPhotos() {
+        newOrPopularChooser(self.page)
             .observe(on: MainScheduler.instance)
             .subscribe{ (response) in
                 self.photos.append(contentsOf: response.data)
-                self.view?.onFetchPhotoSuccess()
-            } onError: { (error) in
-                print(error.localizedDescription)
-            } onCompleted: {
                 self.page += 1
-            }
+                self.view?.onFetchPhotoSuccess()
+            } onError: { error in
+                self.view?.onFetchPhotoFailure(error: error.localizedDescription)
+            } onCompleted: {
+            }.disposed(by: disposeBag)
     }
 }

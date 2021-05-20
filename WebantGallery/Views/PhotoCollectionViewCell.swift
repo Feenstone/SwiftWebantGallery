@@ -14,12 +14,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.imageView.isUserInteractionEnabled = false
         // Initialization code
-    }
-
-    @objc func navigateToDetailView() {
-        
     }
     
     func cellSetup(photo: Photo) {

@@ -13,14 +13,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+            let service = APIService()
             
             window = UIWindow()
-            window?.backgroundColor = .white
             let storyboard = UIStoryboard(name: "Main", bundle: .main)
+            let collectionStoryboard = UIStoryboard(name: "GalleryCollectionView", bundle: .main)
             
-            let newGalleryViewController = storyboard.instantiateViewController(identifier: "NewViewController") as! NewGalleryViewController
+            let newGalleryViewController = collectionStoryboard.instantiateViewController(identifier: "GalleryCollectionView") as! GalleryViewController
             
-            let popularGalleryViewController = PopularGalleryViewController()
+            newGalleryViewController.presenter = GalleryPresenter(newOrPopularChooser: service.fetchPopularPhotos)
+            newGalleryViewController.presenter?.viewDidLoad()
+            
+            newGalleryViewController.setUpNavBar(with: "New")
+            
+            let popularGalleryViewController = collectionStoryboard.instantiateViewController(identifier: "GalleryCollectionView") as! GalleryViewController
+            
+            popularGalleryViewController.setUpNavBar(with: "Popular")
                         
             let controller = storyboard.instantiateViewController(identifier: "InitialViewController") as! UITabBarController
             

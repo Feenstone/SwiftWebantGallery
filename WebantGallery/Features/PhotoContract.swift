@@ -12,7 +12,7 @@ protocol ViewToPresenterPhotoProtocol {
     var photos: [Photo] { get }
     func viewDidLoad()
     func refresh()
-    func fetchNewPhotos()
+    func fetchPhotos()
 }
 
 protocol PresenterToViewPhotoProtocol {
