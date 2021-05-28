@@ -7,25 +7,27 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class GalleryConfigurator {
     let service = APIService()
+    static let storyboard = UIStoryboard(name: "GalleryCollectionView", bundle: .main)
     
-    func configureNew(view: GalleryViewController) {
-        let presenter = GalleryPresenter(newOrPopularChooser: service.fetchNewPhotos)
+    func configure(view: GalleryViewController, newOrPopularChooser: @escaping (_ page: Int) -> Observable<Response>, title: String) {
+        let presenter = GalleryPresenter(newOrPopularChooser: newOrPopularChooser)
         view.presenter = presenter
+        view.collectionTitle = title
+        view.presenter?.view = view
     }
 
-    static func open(navigationController: UINavigationController) {
-//        let view = GalleryConfigurator.getVC()
-//        GalleryConfigurator().configureNew(view: view)
-//        navigationController.pushViewController(view, animated: true)
+    static func createViewController(navigationController: UINavigationController, newOrPopularChooser: @escaping (_ page: Int) -> Observable<Response>, title: String){
+        let view = getVC()
+        navigationController.viewControllers = [view]
+        GalleryConfigurator().configure(view: view, newOrPopularChooser: newOrPopularChooser, title: title)
     }
 
-//    static func getVC() -> NewGalleryViewController {
-//        guard let view = R.storyboard.firstStoryboard.instantiateInitialViewController() else {
-//            return FirstViewController()
-//        }
-//        return view
-//    }
+    static func getVC() -> GalleryViewController {
+        let view = storyboard.instantiateViewController(identifier: "GalleryCollectionView") as! GalleryViewController 
+        return view
+    }
 }

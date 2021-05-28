@@ -12,7 +12,7 @@ import Alamofire
 class NetworkManager<T: Decodable> {
     func fetchPhotoArray(with url: URLRequest) -> Observable<T> {
         return Observable.create { (observer) in
-            let request = AF.request(url).responseDecodable{ (response: DataResponse<T, AFError>) in
+            let request = AF.request(url).responseDecodable(of: T.self, emptyResponseCodes: [200,204,205]){ (response: DataResponse<T, AFError>) in
                 switch response.result{
                 case .success(let value):
                     observer.onNext(value)
@@ -28,6 +28,7 @@ class NetworkManager<T: Decodable> {
                     case 500:
                         observer.onError(APIError(message: "Internal Server Error"))
                     default:
+                        print(error.localizedDescription)
                         observer.onError(APIError(message: error.localizedDescription))
                     }
                 }

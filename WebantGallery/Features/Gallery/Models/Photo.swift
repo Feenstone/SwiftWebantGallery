@@ -9,8 +9,8 @@ import Foundation
 
 struct Photo: Codable{
     var id: Int
-    var name: String
-    var description: String
+    var name: String?
+    var description: String?
     var image: Image
 }
 

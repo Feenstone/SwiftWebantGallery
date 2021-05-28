@@ -16,7 +16,7 @@ class GalleryRequestBuilder {
         let url = endPoint
         let parameters : Parameters = [
             "new": "true",
-            "page": String(page),
+            "page": page,
             "limit": "10"
         ]
         return try! URLEncoding.default.encode(URLRequest(url: url, method: .get), with: parameters)

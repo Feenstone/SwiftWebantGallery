@@ -9,5 +9,6 @@ target 'WebantGallery' do
   pod "Alamofire"
   pod "RxSwift"
   pod 'Kingfisher'
+  pod 'ReachabilitySwift'
 
 end

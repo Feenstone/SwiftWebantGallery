@@ -3,6 +3,7 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,6 +26,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9s-V0-dnk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1383" y="-132"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MXI-C7-qoI">
+            <objects>
+                <viewController storyboardIdentifier="NoInternetConnectionVC" id="Ri0-RU-9BT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X5o-CH-Edl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No internet.png" translatesAutoresizingMaskIntoConstraints="NO" id="d2u-re-U7F">
+                                <rect key="frame" x="132" y="293" width="150" height="150"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mm4-yb-twd">
+                                <rect key="frame" x="80" y="480" width="254" height="55"/>
+                                <string key="text">Slow or no internet connection.
+Please check your internet settings</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oh shucks!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6b-9K-5z3">
+                                <rect key="frame" x="165" y="451" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xLb-v4-l4V"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mm4-yb-twd" firstAttribute="leading" secondItem="xLb-v4-l4V" secondAttribute="leading" constant="80" id="4Wa-Je-o7N"/>
+                            <constraint firstItem="R6b-9K-5z3" firstAttribute="top" secondItem="d2u-re-U7F" secondAttribute="bottom" constant="8" symbolic="YES" id="K1R-Ha-fLf"/>
+                            <constraint firstItem="mm4-yb-twd" firstAttribute="top" secondItem="R6b-9K-5z3" secondAttribute="bottom" constant="8" symbolic="YES" id="Y1w-iT-Fu2"/>
+                            <constraint firstItem="mm4-yb-twd" firstAttribute="centerX" secondItem="d2u-re-U7F" secondAttribute="centerX" id="dFH-5B-eJM"/>
+                            <constraint firstItem="R6b-9K-5z3" firstAttribute="leading" secondItem="xLb-v4-l4V" secondAttribute="leading" constant="165" id="g5N-UD-fhd"/>
+                            <constraint firstAttribute="bottom" secondItem="R6b-9K-5z3" secondAttribute="bottom" constant="264" id="l0e-nF-QI1"/>
+                            <constraint firstItem="mm4-yb-twd" firstAttribute="centerX" secondItem="X5o-CH-Edl" secondAttribute="centerX" id="vC5-P2-Yby"/>
+                            <constraint firstItem="R6b-9K-5z3" firstAttribute="trailing" secondItem="d2u-re-U7F" secondAttribute="trailing" id="wzT-g6-cIQ"/>
+                            <constraint firstItem="xLb-v4-l4V" firstAttribute="bottom" secondItem="mm4-yb-twd" secondAttribute="bottom" constant="201" id="y5E-Q4-1iN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OHh-f0-H1w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.8695652173915" y="-709.23913043478262"/>
         </scene>
         <!--New-->
         <scene sceneID="tK0-hR-O4F">
@@ -56,7 +102,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="arrow.backward" catalog="system" backIndicatorTransitionMaskImage="arrow.backward" id="jOf-dQ-7az">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.1843137255" green="0.090196078430000007" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -96,19 +141,15 @@
             </objects>
             <point key="canvasLocation" x="1760.8695652173915" y="106.79347826086958"/>
         </scene>
-        <!--NoInternetConnectionVC-->
-        <scene sceneID="bqS-oK-hrF">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="NoInternetConnectionVC" storyboardName="NoInternetConnectionView" referencedIdentifier="NoInternetConnectionVC" id="7Ha-op-PBu" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TnO-mg-D3D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="938" y="-227"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="No internet.png" width="150" height="150"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="book.closed" catalog="system" width="115" height="128"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -26,9 +26,6 @@ class PhotoDetailViewController: UIViewController {
     func setupVC() {
         self.builder = GalleryRequestBuilder()
         
-        print(self.photo as Any)
-        print(builder?.createImageUrl(name: (self.photo?.image.name)!) as Any)
-        
         self.imageView.kf.setImage(with: builder?.createImageUrl(name: (self.photo?.image.name)!))
         
         self.nameLabel.text = self.photo?.name

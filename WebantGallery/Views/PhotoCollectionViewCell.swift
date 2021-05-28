@@ -28,9 +28,9 @@ class PhotoCollectionViewCell: UICollectionViewCell {
 
         
         self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 4.2)
         self.layer.shadowOpacity = 0.3
-        self.layer.shadowRadius = 0.0
+        self.layer.shadowRadius = 6
         self.layer.cornerRadius = 8.0
         self.layer.masksToBounds = false
     }
