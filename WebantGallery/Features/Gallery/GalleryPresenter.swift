@@ -14,6 +14,7 @@ class GalleryPresenter: ViewToPresenterPhotoProtocol {
     private let service = APIService()
     private var page = 1
     var isEndReached: Bool = false
+    var checkScroll: Bool = true
     var newOrPopularChooser: (_ page: Int) -> Observable<Response>
     private let disposeBag = DisposeBag()
     
@@ -43,12 +44,15 @@ class GalleryPresenter: ViewToPresenterPhotoProtocol {
                     if self.page == response.countOfPages {
                         self.isEndReached = true
                     }
+                    self.checkScroll = true
                     self.view?.onFetchPhotoSuccess()
                 } onError: { error in
                     self.view?.onFetchPhotoFailure(error: error.localizedDescription)
+                    self.checkScroll = false
                 }.disposed(by: disposeBag)
         } else {
             self.view?.onFetchPhotoFailure(error: "No Internet connection")
+            checkScroll = false
         }
     }
 }

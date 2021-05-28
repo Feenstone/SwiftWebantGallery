@@ -48,7 +48,7 @@ class GalleryViewController: UIViewController {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if (((scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height ) && !isLoadingList && !presenter!.isEndReached){
+        if (((scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height ) && !isLoadingList && !presenter!.isEndReached && presenter!.checkScroll){
             footerView.startAnimating()
             self.isLoadingList = true
             self.presenter?.fetchPhotos()
@@ -130,6 +130,7 @@ extension GalleryViewController: PresenterToViewPhotoProtocol{
         self.collectionView!.layoutSubviews()
         self.refreshControl.endRefreshing()
         self.collectionView.backgroundView = nil
+        self.collectionView.reloadData()
     }
     
     func onFetchPhotoFailure(error: String) {
